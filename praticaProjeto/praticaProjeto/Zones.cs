@@ -22,14 +22,29 @@ namespace praticaProjeto
         public int ParkingSlots { get => parkingSlots; set => parkingSlots = value; }
 
 
-        public void getZoneInfo()
+        public void getZone1Info()
         {
-            Console.WriteLine("A tarifa da zona é:" + hourRate);
-            Console.WriteLine("Duração de estacionamento:" + duration);
+            Console.WriteLine("A tarifa da zona 1 é: " + hourRate + "eur. por hora");
+            Console.WriteLine("Duração de estacionamento:" + duration + "min.");
             Console.WriteLine("Capacidade:" + capacity);
-            Console.WriteLine("Lugares disponíveis:" + parkingSlots);
+            Console.WriteLine("Lugares disponíveis:" + parkingSlots + "\n");
         }
 
+        public void getZone2Info()
+        {
+            Console.WriteLine("A tarifa da zona 2 é:" + hourRate + "eur. por hora");
+            Console.WriteLine("Duração de estacionamento:" + duration + "min.");
+            Console.WriteLine("Capacidade:" + capacity);
+            Console.WriteLine("Lugares disponíveis:" + parkingSlots + "\n");
+        }
+
+        public void getZone3Info()
+        {
+            Console.WriteLine("A tarifa da zona 3 é:" + hourRate + "eur. por hora");
+            Console.WriteLine("Duração de estacionamento:" + duration + "min.");
+            Console.WriteLine("Capacidade:" + capacity);
+            Console.WriteLine("Lugares disponíveis:" + parkingSlots + "\n");
+        }
 
         public void parkCar() {
 
