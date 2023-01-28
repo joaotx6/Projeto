@@ -34,58 +34,53 @@ class Program
 
 
         //guardar a opcao do utilizador
-        int userChoice1 = int.Parse(Console.ReadLine());
+        int userChoiceMenus = int.Parse(Console.ReadLine());
+        int userChoiceSubMenus = int.Parse(Console.ReadLine());
 
-        int userChoice2 = int.Parse(Console.ReadLine());
-
-        switch (userChoice1)
+        switch (userChoiceMenus)
         { 
             case 1:
                 HelpInterface.menuAdmin();
-
-                if (userChoice2 == 1)
+                switch (userChoiceSubMenus)
                 {
-                    zona1.getZone1Info();
-                    zona2.getZone2Info();
-                    zona3.getZone3Info();
-                }
-                else if (userChoice2 == 2)
-                {
-                    HelpInterface.showsHistory();
-                }
-                else {
-                    Console.WriteLine("Obrigado, adeus.");
+                    case 1:
+                        //aki tem de mostrar a info das zonas todas 
+                        zona1.getZone1Info();
+                        break;
+                    case 2:
+                        HelpInterface.showsHistory();
+                        break;
+                    case 3:
+                        Console.WriteLine("Adeus.");
+                        break;
                 }
                 break;
 
             case 2:
                 HelpInterface.menuCliente();
-
-                if (userChoice1 == 1)
+                switch (userChoiceSubMenus)
                 {
-                    zona1.getZone1Info();
-                    zona2.getZone2Info();
-                    zona3.getZone3Info();
+                    case 1:
+                        ParkingFunctionality.effectiveParking();
+                        break;
+                    case 2:
+                        HelpInterface.showsHistory();
+                        break;
+                    case 3:
+                        Console.WriteLine("Adeus.");
+                        break;
                 }
-                else if (userChoice1 == 2)
-                {
-                    HelpInterface.showsHistory();
-                }
-                else
-                {
-                    Console.WriteLine("Obrigado, adeus.");
-                }
-
+                break;
+            case 3:
+                Console.WriteLine("Obrigado pela visita, adeus.");
                 break;
             default:
                 Console.WriteLine("Escolha Errada. Tente novamente.");
                 break;
         }
-        Console.ReadLine();
-
         
         //entrar em zonas:
-        Console.WriteLine("Prima qualquer tecla para verificar as informações das 3 zonas disponíveis.");
+        Console.WriteLine("Prima qualquer tecla para verificar as informaçoes das 3 zonas disponiveis.");
         ConsoleKeyInfo key2 = Console.ReadKey();
 
         zona1.getZone1Info();
@@ -106,35 +101,23 @@ class Program
             case 1:
                 Console.WriteLine("Escolheu a zona 1.");
                 zonePrice = 1.15;
+                ParkingFunctionality.effectiveParking();
                 break;
             case 2:
                 Console.WriteLine("Escolheu a zona 2.");
                 zonePrice = 1;
+                ParkingFunctionality.effectiveParking();
                 break;
             case 3:
                 Console.WriteLine("Escolheu a zona 3.");
                 zonePrice = 0.62;
+                ParkingFunctionality.effectiveParking();
                 break;
             default:
                 Console.WriteLine("Escolha Errada. Tente novamente.");
                 break;
         }
 
-        Console.WriteLine("Quanto tempo deseja estacionar?");
-        hoursParked = double.Parse(Console.ReadLine());
-        double totalCost = zonePrice * hoursParked;
-        Console.WriteLine("O custo total são " + Math.Round(totalCost, 2) + " euros.");
-        Console.WriteLine("Por favor insira pagamento: ");
-        double payment = double.Parse(Console.ReadLine());
-        if (payment >= totalCost)
-        {
-            Console.WriteLine("Pagamento aceite. Obrigado.");
-        }
-        else
-        {
-            Console.WriteLine("Pagamento Invalido. Tente novamente.");
-        }
-        Console.ReadLine();
         
     }
 

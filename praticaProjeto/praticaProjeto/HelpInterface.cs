@@ -52,12 +52,6 @@ namespace praticaProjeto
 
         }
 
-        public static void effectiveParking()
-        {
-            Console.WriteLine("A estacionar em zona.");
-
-        }
-
     }
 }
 

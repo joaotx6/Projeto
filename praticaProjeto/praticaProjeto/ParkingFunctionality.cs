@@ -40,6 +40,28 @@ namespace praticaProjeto
             }
         }
 
+        //ta a dar sempre 0 euros o custo do estacionamento
+        public static void effectiveParking() {
+
+            double hoursParked = 0;
+            double zonePrice = 0;
+
+            Console.WriteLine("Quanto tempo deseja estacionar?");
+            hoursParked = double.Parse(Console.ReadLine());
+            double totalCost = zonePrice * hoursParked;
+            Console.WriteLine("O custo total são " + Math.Round(totalCost, 2) + " euros.");
+            Console.WriteLine("Por favor insira pagamento: ");
+            double payment = double.Parse(Console.ReadLine());
+            if (payment >= totalCost)
+            {
+                Console.WriteLine("Pagamento aceite. Obrigado.");
+            }
+            else
+            {
+                Console.WriteLine("Pagamento Invalido. Tente novamente.");
+            }
+        }
+
     }
 
 }

@@ -25,25 +25,25 @@ namespace praticaProjeto
         public void getZone1Info()
         {
             Console.WriteLine("A tarifa da zona 1 é: " + hourRate + "eur. por hora");
-            Console.WriteLine("Duração de estacionamento:" + duration + "min.");
+            Console.WriteLine("Duracao de estacionamento:" + duration + "min.");
             Console.WriteLine("Capacidade:" + capacity);
-            Console.WriteLine("Lugares disponíveis:" + parkingSlots + "\n");
+            Console.WriteLine("Lugares disponiveis:" + parkingSlots + "\n");
         }
 
         public void getZone2Info()
         {
             Console.WriteLine("A tarifa da zona 2 é:" + hourRate + "eur. por hora");
-            Console.WriteLine("Duração de estacionamento:" + duration + "min.");
+            Console.WriteLine("Duracao de estacionamento:" + duration + "min.");
             Console.WriteLine("Capacidade:" + capacity);
-            Console.WriteLine("Lugares disponíveis:" + parkingSlots + "\n");
+            Console.WriteLine("Lugares disponiveis:" + parkingSlots + "\n");
         }
 
         public void getZone3Info()
         {
             Console.WriteLine("A tarifa da zona 3 é:" + hourRate + "eur. por hora");
-            Console.WriteLine("Duração de estacionamento:" + duration + "min.");
+            Console.WriteLine("Duracao de estacionamento:" + duration + "min.");
             Console.WriteLine("Capacidade:" + capacity);
-            Console.WriteLine("Lugares disponíveis:" + parkingSlots + "\n");
+            Console.WriteLine("Lugares disponiveis:" + parkingSlots + "\n");
         }
 
         public void parkCar() {
@@ -66,11 +66,11 @@ namespace praticaProjeto
                     {
                         if (parkingSlot == 0)
                         {
-                            Console.WriteLine("O lugar" + (i + 1) + "está vazio.");
+                            Console.WriteLine("O lugar" + (i + 1) + "esta vazio.");
                         }
                         else
                         {
-                            Console.WriteLine("O lugar" + (i + 1) + "está ocupado.");
+                            Console.WriteLine("O lugar" + (i + 1) + "esta ocupado.");
                         }
                     }
                     login = false;
