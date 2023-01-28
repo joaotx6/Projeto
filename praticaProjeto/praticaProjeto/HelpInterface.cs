@@ -45,6 +45,19 @@ namespace praticaProjeto
             Console.WriteLine("3. Sair.");
 
         }
+
+        public static void showsHistory()
+        {
+            Console.WriteLine("O historico esta em construcao.");
+
+        }
+
+        public static void effectiveParking()
+        {
+            Console.WriteLine("A estacionar em zona.");
+
+        }
+
     }
 }
 

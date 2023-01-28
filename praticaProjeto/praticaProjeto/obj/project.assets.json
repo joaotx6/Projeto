@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/joaoteixeira/Desktop/asd/Projeto/praticaProjeto/praticaProjeto/praticaProjeto.csproj",
+      "projectUniqueName": "/Users/joaoteixeira/Desktop/Projeto/praticaProjeto/praticaProjeto/praticaProjeto.csproj",
       "projectName": "praticaProjeto",
-      "projectPath": "/Users/joaoteixeira/Desktop/asd/Projeto/praticaProjeto/praticaProjeto/praticaProjeto.csproj",
+      "projectPath": "/Users/joaoteixeira/Desktop/Projeto/praticaProjeto/praticaProjeto/praticaProjeto.csproj",
       "packagesPath": "/Users/joaoteixeira/.nuget/packages/",
-      "outputPath": "/Users/joaoteixeira/Desktop/asd/Projeto/praticaProjeto/praticaProjeto/obj/",
+      "outputPath": "/Users/joaoteixeira/Desktop/Projeto/praticaProjeto/praticaProjeto/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/joaoteixeira/.nuget/NuGet/NuGet.Config"
