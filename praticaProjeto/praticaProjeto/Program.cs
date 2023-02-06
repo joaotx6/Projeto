@@ -19,7 +19,7 @@ class Program
 
         //Dá indicação do estado do parque (hora e dia da semana) e permite inicializá-lo.
         bool parkStatus = HelpInterface.parkStatus(currentHour, currentDay);
-        parkStatus = true;
+
 
         //Criação de cada zona com o valor da tarifa por hora, duração máxima em minutos,
         //capacidade do parque, e lugares disponiveis gerados de forma random.
@@ -45,23 +45,23 @@ class Program
 
             switch (userChoiceMenus)
             {
-
+                //menu admin
                 case 1:
                     HelpInterface.menuAdmin();
                     userChoiceSubMenus = HelpInterface.errorControl();
 
                     switch (userChoiceSubMenus)
                     {
-                        case 1:
+                        case 1://ver zonas
                             HelpInterface.writeZones(zona1, zona2, zona3);
                             Console.ReadLine();
                             break;
-                        case 2:
+                        case 2://ver hist
                             HelpInterface.showsHistory();
                             Console.ReadLine();
 
                             break;
-                        case 3:
+                        case 3://sair
                             Console.WriteLine("Adeus.");
                             Console.ReadLine();
                             Environment.Exit(0);
@@ -73,12 +73,12 @@ class Program
                     }
                     break;
 
-                case 2:
+                case 2://menu user
                     HelpInterface.menuCliente();
                     userChoiceSubMenus = HelpInterface.errorControl();
                     switch (userChoiceSubMenus)
                     {
-                        case 1:
+                        case 1://estacionar
                             Console.WriteLine("Qual a zona para estacionar?");
                             int zoneOfParking = HelpInterface.errorControl();
                             switch (zoneOfParking)
@@ -94,11 +94,11 @@ class Program
 
                             }
                             break;
-                        case 2:
+                        case 2://ver hist
                             HelpInterface.showsHistory();
                             Console.ReadLine();
                             break;
-                        case 3:
+                        case 3://sair
                             Console.WriteLine("Adeus.");
                             Console.ReadLine();
                             Environment.Exit(0);
@@ -109,7 +109,7 @@ class Program
                             break;
                     }
                     break;
-                case 3:
+                case 3://sair
                     Console.WriteLine("Obrigado pela visita, adeus.");
                     Console.ReadLine();
                     Environment.Exit(0);

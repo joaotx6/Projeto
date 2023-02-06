@@ -1,28 +1,26 @@
 ﻿<Properties StartupConfiguration="{304C3680-C5B7-4E27-B830-0DAF8D0FB1A0}|Default">
+  <MonoDevelop.Ide.ItemProperties.praticaProjeto PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.praticaProjeto PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="praticaProjeto/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="praticaProjeto/ParkingFunctionality.cs">
     <Files>
-      <File FileName="praticaProjeto/Program.cs" Line="80" Column="10" IsPinned="True" />
-      <File FileName="praticaProjeto/ParkingFunctionality.cs" Line="48" Column="1" />
-      <File FileName="praticaProjeto/HelpInterface.cs" Line="53" Column="10" />
-      <File FileName="praticaProjeto/Zones.cs" Line="75" Column="22" />
+      <File FileName="praticaProjeto/Program.cs" Line="93" Column="43" IsPinned="True" />
+      <File FileName="praticaProjeto/ParkingFunctionality.cs" Line="67" Column="40" />
+      <File FileName="praticaProjeto/HelpInterface.cs" />
+      <File FileName="praticaProjeto/Zones.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="praticaProjeto" expanded="True">
-            <Node name="praticaProjeto" expanded="True">
-              <Node name="ParkingFunctionality.cs" selected="True" />
-            </Node>
+            <Node name="praticaProjeto" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

@@ -11,7 +11,7 @@ namespace praticaProjeto
             {
                 return true;
             }
-            else if (dayOfWeek == 7 && hour >= 9 && hour < 14)
+            else if (dayOfWeek == 6 && hour >= 9 && hour < 14)
             {
                 return true;
             }
