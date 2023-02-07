@@ -49,7 +49,7 @@ namespace praticaProjeto
 
         public static void showsHistory()
         {
-            Console.WriteLine("O historico esta em construcao e nao vai ficar pronto.");
+            Console.WriteLine("O historico esta em construcao.");
 
         }
 
