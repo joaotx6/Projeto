@@ -47,17 +47,40 @@ namespace praticaProjeto
 
         }
 
-        public static void showsHistory()
+        public static void showsHistory(List<Ticket> tickets)
         {
-            Console.WriteLine("O historico esta em construcao.");
-
+            Console.Clear();
+            for (int i = 0; i < tickets.Count; i++)
+            {
+                Console.WriteLine($"Ticket {i + 1}: Zona {tickets[i].IdZona} data de entrada {tickets[i].StartingTime}, data de saida: {tickets[i].LeavingTime}, com matricula: {tickets[i].LicensePlate} e valor pago: {tickets[i].PaidValue}");
+            }
+            Console.ReadLine();
         }
 
-        public static void writeZones(Zones zona1, Zones zona2, Zones zona3)
+        public static void showsHistoryAdmin()
         {
-            Zones.getZoneInfo(zona1);
-            Zones.getZoneInfo(zona2);
-            Zones.getZoneInfo(zona3);
+            Console.Clear();
+            Console.WriteLine("Em construcao");
+            Console.ReadLine();
+        }
+
+
+        public static void writeZones(Zones zona1, int zona1Avai, Zones zona2, int zona2Avai, Zones zona3, int zona3Avai)
+        {
+            Zones.getZoneInfo(zona1, zona1Avai);
+            Zones.getZoneInfo(zona2, zona2Avai);
+            Zones.getZoneInfo(zona3, zona3Avai);
+        }
+
+        public static void printTicket(Ticket ticket)
+        {
+            Console.Clear();
+            Console.WriteLine("Ticket:");
+            Console.WriteLine($"A zona que estacionou foi a zona: {ticket.IdZona}");
+            Console.WriteLine($"A data de entrada foi: {ticket.StartingTime}");
+            Console.WriteLine($"A data de saida sera: {ticket.LeavingTime}");
+            Console.WriteLine($"A matricula e: {ticket.LicensePlate}");
+            Console.WriteLine($"O valor pago foi: {ticket.PaidValue} eur");
         }
 
         public static int errorControl()
@@ -89,41 +112,5 @@ namespace praticaProjeto
             }
 
         }
-
-        /*
-        Console.WriteLine("Agora escolha a zona que pretende estacionar (1, 2 ou 3).");
-
-        //guardar a opcao do utilizador
-        //Pergunta ao utilizador de 3 zonas, qual quer estacionar e determina o valor de
-        //cada zona. Depois calcula o custo total com base na tarifa horária e tempo de parque.
-        //Finalmente, pede ao utilizador para inserir pagamento
-        //Verifica se o pagamento é maior ou igual ao custo total, e imprime OK caso
-        //seja positivo, ou tente novamente caso seja negativo.
-        int userChoice = int.Parse(Console.ReadLine());
-        switch (userChoice)
-        {
-            case 1:
-                Console.WriteLine("Escolheu a zona 1.");
-                zonePrice = 1.15;
-                ParkingFunctionality.effectiveParking();
-                break;
-            case 2:
-                Console.WriteLine("Escolheu a zona 2.");
-                zonePrice = 1;
-                ParkingFunctionality.effectiveParking();
-                break;
-            case 3:
-                Console.WriteLine("Escolheu a zona 3.");
-                zonePrice = 0.62;
-                ParkingFunctionality.effectiveParking();
-                break;
-            default:
-                Console.WriteLine("Escolha Errada. Tente novamente.");
-                break;
-        }
-        */
     }
-
 }
-
-

@@ -24,24 +24,14 @@ namespace praticaProjeto
             this.parkingSlots = parkingSlots;
         }
 
-        public static void getZoneInfo(Zones zona)
+        public static void getZoneInfo(Zones zona, int zonaAvailable)
 
         {
             Console.WriteLine($"A tarifa da zona {zona.id} é: {zona.hourRate} eur. por hora");
-            Console.WriteLine($"Duracao de estacionamento é {zona.duration} min.");
+            Console.WriteLine($"Duracao de estacionamento sao {zona.duration} min.");
             Console.WriteLine($"A capacidade é: {zona.capacity}");
-            Console.WriteLine($"Lugares disponiveis: {zona.parkingSlots}\n");
+            Console.WriteLine($"Lugares disponiveis: {zonaAvailable}\n");
         }
-
-        public void parkCar() {
-
-            bool login = true;
-            double total = 0;
-            double coins = 0;
-            int parkingSlot = 0;
-
-        }
-
     }
 }
 

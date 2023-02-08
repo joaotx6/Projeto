@@ -25,7 +25,7 @@ namespace praticaProjeto
         
 
         //ta a dar sempre 0 euros o custo do estacionamento
-        public static void effectiveParking(Zones zona)
+        public static Ticket effectiveParking(Zones zona)
         {
 
             DateTime CurrentDate = DateTime.Now; //para controlar tempo limite estacionament dos parques
@@ -35,17 +35,22 @@ namespace praticaProjeto
 
             if (currentDay > 0 && currentDay < 6)
             {
+                //hora limite - a hora que estamos 
                 maxTime = (20 - CurrentDate.Hour) * 60 - CurrentDate.Minute;
-
+                //guarda os minutos k faltam para o parque fechar durante semana
+               
             }
             else if (currentDay == 6)
             {
                 maxTime = (14 - CurrentDate.Hour) * 60 - CurrentDate.Minute;
+                //guarda os minutos k faltam para o parque fechar ao sabado
+                
             }
 
             if (timeLimit == 0 || maxTime < timeLimit) //controla tempo de todas as zonas
             {
                 timeLimit = maxTime;
+                
             }
 
 
@@ -59,6 +64,7 @@ namespace praticaProjeto
             bool actualPay = true;
 
             while (tryToPay)
+                
             {
                 Console.WriteLine($"O tempo maximo de estacionamento sao {timeLimit} minutos.");
                 Console.WriteLine("Quanto tempo deseja estacionar?");
@@ -67,10 +73,11 @@ namespace praticaProjeto
                 {
                     Console.WriteLine("Insira um valor correto. Atencao que so pode inserir numeros.");
                     Console.ReadLine();
+                    return null;
                 }
                 else if (hoursParked <= timeLimit)
                 {
-                    double totalCost = zonePrice * (hoursParked / 60); //calcula tempo de estacionamento
+                    double totalCost = Math.Round(zonePrice * (hoursParked / 60), 2); //calcula tempo de estacionamento
                     Console.WriteLine("O custo total são " + Math.Round(totalCost, 2) + " euros.");
                     while (actualPay)
                     {
@@ -99,45 +106,48 @@ namespace praticaProjeto
                                 break;
                             default:
                                 Console.WriteLine("Por favor insira uma moeda valida.");
-                                break;
+                                return null;
                         }
                         if (saldo > totalCost)
                         {
                             actualPay = false;
                             troco = Math.Round(saldo - totalCost, 2);
                             Console.WriteLine($"O seu troco e: {troco} eur.");
+                            //logica para calcular hora de saida
+                            DateTime leavingHour = CurrentDate.AddMinutes(hoursParked);
+                            Console.WriteLine("Insira a sua matricula:");
+                            string licensePlate = Console.ReadLine();
+
+                            //criaçao (instancia) de objeto ticket
+                            Ticket myTicket = new Ticket(zona.Id, CurrentDate, leavingHour, licensePlate, totalCost);
                             actualPay = false;
+                            tryToPay = false;
+
+                            return myTicket;
                         }
                         else if (saldo == totalCost)
                         {
                             actualPay = false;
+                            tryToPay = false;
+                            return null;
+
                         }
 
-
-                        /*if ( >= totalCost)
-                        {
-                            Console.WriteLine("Pagamento aceite. Obrigado.");
-                            Console.ReadLine();
-                            tryToPay = false;
-                            actualPay = false;
-                        }else
-                        {
-                            Console.WriteLine("Pagamento Invalido. Tente novamente.");
-                            Console.ReadLine();
-                        
-                        
-                        }*/
+                        return null;
                     }
+                    return null;
                 }
                 
                 else
                 {
                     Console.WriteLine("Excedeu o tempo limite.");
+                    
                 }
+                
+
             }
+            return null;
         }
-
     }
-
 }
 
