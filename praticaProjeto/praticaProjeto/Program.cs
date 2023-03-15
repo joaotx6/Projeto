@@ -34,10 +34,6 @@ class Program
         int zone3occup = zona3.Capacity - zona3.ParkingSlots;
 
         
-
-
-        //guardar a opcao do utilizador
-
         while (mainMenuActive)
         {
 

@@ -24,7 +24,6 @@ namespace praticaProjeto
         }
         
 
-        //ta a dar sempre 0 euros o custo do estacionamento
         public static Ticket effectiveParking(Zones zona)
         {
 
